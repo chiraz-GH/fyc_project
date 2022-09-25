@@ -7,10 +7,15 @@ pipeline {
           sh 'bash $WORKSPACE/Build/startnodes.sh'
        } 
       }
-    stage('Test') {
+    stage('Deploy') {
       steps {       
-          sh 'bash $WORKSPACE/Test/testscript.sh'
+          sh 'bash $WORKSPACE/Test/deployscript.sh'
       }
     }
+    // stage('Test') {
+    //   steps {       
+    //       sh 'bash $WORKSPACE/Test/testscript.sh'
+    //   }
+    // }
    }
 }
