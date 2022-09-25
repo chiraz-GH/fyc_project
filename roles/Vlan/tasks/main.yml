@@ -1,0 +1,12 @@
+---
+# tasks file for roles/Vlan
+- name: Genarate config vlan
+  template:
+    src=Vlan.j2
+    dest="{{ configs_dir }}/{{ inventory_hostname }}/Vlan.cfg"
+
+
+- name: PUSH CONFIG
+  ios_config:
+    src: "{{ configs_dir }}/{{ inventory_hostname }}/Vlan.cfg"
+

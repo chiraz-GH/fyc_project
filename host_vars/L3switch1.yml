@@ -1,0 +1,18 @@
+---
+vlans:
+  - id: 10
+    ipv4_network: 192.168.10.1
+    netmask: 255.255.255.0
+    desc: VLAN_10
+  - id: 20
+    ipv4_network: 192.168.20.1
+    netmask: 255.255.255.0
+    desc: VLAN_20
+
+interfaces_trunk:
+  - name: Gi0/1
+    mode: trunk
+    allowed_vlans: 10,20
+  - name: Gi0/2
+    mode: trunk
+    allowed_vlans: 10,20

@@ -1,0 +1,20 @@
+---
+vlans:
+  - id: 10
+    desc: VLAN_10
+  - id: 20
+    desc: VLAN_20
+
+interfaces_access:
+  - name: Gi0/2
+    mode: access
+    vlan: 10
+  - name: Gi0/3
+    mode: access
+    vlan: 20
+
+interfaces_trunk:
+    - name: Gi0/1
+      mode: trunk
+      allowed_vlans: 10,20
+

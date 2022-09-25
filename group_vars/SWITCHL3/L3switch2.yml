@@ -1,0 +1,8 @@
+---
+vlans:
+  - id: 30
+    desc: VLAN-30
+    
+  - id: 40
+    desc: VLAN-40
+    

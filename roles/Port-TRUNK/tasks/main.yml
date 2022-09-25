@@ -1,0 +1,10 @@
+---
+# tasks file for roles/Port-TRUNK
+- name: BUILD CONFIG Port trunk
+  template:
+    src: Port-TRUNK.j2
+    dest: "{{ configs_dir }}/{{ inventory_hostname }}/Port-TRUNK.cfg"
+
+- name: PUSH CONFIG
+  ios_config:
+    src: "{{ configs_dir }}/{{ inventory_hostname }}/Port-TRUNK.cfg"

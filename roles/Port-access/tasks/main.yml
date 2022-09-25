@@ -1,0 +1,10 @@
+---
+# tasks file for roles/Port-access
+- name: BUILD CONFIG Port-access
+  template:
+    src: Port-access.j2
+    dest: "{{ configs_dir }}/{{ inventory_hostname }}/Port-access.cfg"
+
+- name: PUSH CONFIG
+  ios_config:
+    src: "{{ configs_dir }}/{{ inventory_hostname }}/Port-access.cfg"

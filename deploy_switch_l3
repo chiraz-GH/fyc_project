@@ -1,0 +1,16 @@
+---
+- name: DEPLOY INTER-VLAN ROUTING
+  hosts: SWITCHL3 
+  gather_facts: false
+  connection: local
+#  vars:
+#    cli:
+#      username: fyc
+#      password: cisco123
+#      timeout: 100
+
+  roles:
+    - Vlan
+    - Interface-Vlan
+    - Port-TRUNK
+ 

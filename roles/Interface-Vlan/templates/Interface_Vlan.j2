@@ -1,0 +1,8 @@
+{% for vlan in vlans %}
+{% if vlan.ipv4_network is defined %}
+interface Vlan{{vlan.id}}
+ description {{vlan.desc}}
+ ip address {{vlan["ipv4_network"]}} {{vlan["netmask"]}}
+ no shu
+{% endif %}
+{% endfor %}

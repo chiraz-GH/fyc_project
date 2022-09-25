@@ -1,0 +1,10 @@
+---
+# tasks file for roles/Interface-Vlan
+- name: BUILD CONFIG Interface VLan
+  template:
+    src: Interface_Vlan.j2
+    dest: "{{ configs_dir }}/{{ inventory_hostname }}/Interface_Vlan.cfg"
+
+- name: PUSH CONFIG
+  ios_config:
+    src: "{{ configs_dir }}/{{ inventory_hostname }}/Interface_Vlan.cfg"

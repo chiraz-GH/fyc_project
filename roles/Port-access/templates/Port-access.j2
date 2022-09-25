@@ -1,0 +1,7 @@
+#jinja2: lstrip_blocks: "true"
+{% for int in interfaces_access %}
+interface {{int['name']}}
+  switchport mode {{int['mode']}}
+  switchport access vlan {{int['vlan']}}
+  
+{% endfor %}

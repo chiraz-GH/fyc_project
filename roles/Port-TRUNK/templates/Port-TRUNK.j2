@@ -1,0 +1,6 @@
+{% for int in interfaces_trunk %}
+interface {{int['name']}}
+  switchport trunk encapsulation dot1q
+  switchport trunk allowed vlan {{int['allowed_vlans']}}
+  switchport mode {{int['mode']}}
+{% endfor %}
