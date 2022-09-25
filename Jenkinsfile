@@ -9,7 +9,7 @@ pipeline {
       }
     stage('Deploy') {
       steps {       
-          sh 'bash $WORKSPACE/Test/deployscript.sh'
+          sh 'bash $WORKSPACE/Deploy/deployscript.sh'
       }
     }
     // stage('Test') {
